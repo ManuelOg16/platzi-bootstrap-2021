@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>PlatziConf Hawaii</title>
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
+    <!-- Header -->
+  <header>
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">  <!-- cambiamos el color de fondo de light a dark fixed-top para fijar el header -->
+     <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="imglogo" src="assets/images/platzi-logo.png" alt="Platzi-logo">
+        Conf Hawaii
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto"><!--me-auto margin end auto calcula de forma auto el margin que va a la derecha y tira el submenu a la izquierda ms tira el submenu a la derecha-->
+          <li class="nav-item " >
+            <a class="nav-link" href="#main">La conferencia</a><!-- el # se utiliza para un anavegacion interna del sitio usando los id de otros elementos -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#speakers">Los oradores</a>
+          </li>      <!-- quitamos el dropdown y el form -->
+          <li class="nav-item">
+            <a class="nav-link" href="#place-time">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#convierte-orador">Conviértete en orador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Comprar tickets </a><!-- data-toggle="modal" data-target="#modalCompra para que aparezca el modal que esta al final -->
+           <!-- si tuvieramos multiples modals en nuestro sitio solo hay que cambiarle los data target a los cuales hacen referencia -->
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
+  </header>
+    <!-- Header -->
+    <main id="main">
+    <!-- main -->
+     <section class="main">
+       <!-- cambiamos este id carouselExampleFade por carousel -->
+      <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false"><!-- data pause no permite que el carrusel se pause cuando pasemos el puntero del mouse por encima de las imagenes-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/images/hawaii.jpg" alt="Hawaii 1">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/images/hawaii2.jpg" alt="Hawaii 2">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/images/hawaii3.jpeg" alt="Hawaii 3">
+          </div>
+          <!-- agregamo un ovrelay-->
+          <div class="overlay">
+             <div class="container h-100">
+               <div class="row align-items-center h-100"> <!--para que el texto aparezca centrado verticalmente h-100 le decimos que tenga un height del 100%-->
+                 <div class="col-md-6 offset-md-6 text-center text-md-end"> <!--text-center=para centrar el titulo y botones en dispositivos pequeños  text-md-end=apartir de los medianos se tire a la derecha -->
+                   <h1>Platzi Conf Hawaii</h1> <!-- a partir de dispositivos medianos que ocupe 6 columnas md-6 y con offset-md-6 que se corra hacia la derecha 6 columnas para que el texto este tirado hacia la derecha text-end col-md-6 offset-md-6 text-end -->
+                   <p class="d-none d-md-block"> <!-- para esconder el texto en dispositivos mas pequeños a partir de un dispositivo mediano oculta el parrafo-->
+                     Platzi Conf llega por primera vez a Hawaii! Un evento para
+                     compartir con nuestra comunidad el conocimiento y experiencia
+                     de los expertos que están creando el futuro de internet.
+                     Ven a conocer a miembros del Team Platzi, a otros 
+                     estudiantes de Platzi y a los oradores de primer nivel
+                     que tenemos para ti. Te esperamos!
+                    </p>
+                    <a href="#" class="btn btn-outline-light">Quiero ser orador</a><!-- a los links podemos aplica el btn btn-outline-light no tiene que ser un button-->
+                    <button type="button" class="btn btn-platzi" data-toggle="modal" data-target="#modalCompra">Comprar tickets</button>
+                 </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- main -->
+    </main>
+    <!-- Speakers -->
+     <section id="speakers" class="mt-4"> <!-- margin top mt4 para separarlo de la seccion del carousel y mb-4 margin bottom para separarlo del seccion de abajo o del footer -->
+      <div class="container">
+        <div class="row">
+           <div class="col text-center text-uppercase"> <!-- center para centrar texto y uppercase para que aparezca en mayusculas -->
+             <small>Conoce a los</small><!-- small para que el texto aparezca mas pequeño -->
+             <h2>Oradores</h2><!-- h2 class="h6" con esta clase puedo cambiar el tamaño del h2-->
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4"> <!-- selecciono y luego control d y me muevo con flechas y mi cursor se repite-->
+            <div class="card">
+              <img class="card-img-top" src="assets/speakers/sacha.jpg" alt="Foto de Sacha">
+              <div class="card-body">
+                <div class="badges ">     <!-- badges -->
+                  <span class="badge bg-warning text-dark">JavaScript </span>
+                  <span class="badge bg-info text-dark">React</span>
+                </div>
+                <h5 class="card-title">Sacha Lifszyc</h5> <!--elimino el espacio en el titulo con mb=0 -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="assets/speakers/leonidas2.jpeg" alt="Foto de Sacha">
+              <div class="card-body">
+                <div class="badges ">     <!-- badges -->
+                  <span class="badge bg-warning text-dark">JavaScript </span>
+                  <span class="badge bg-info text-dark">React</span>
+                </div>
+                <h5 class="card-title mb-0">Leonidas Esteban</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="assets/speakers/freddy.jpeg" alt="Foto de Sacha">
+              <div class="card-body">
+                <div class="badges ">     <!-- badges -->
+                  <span class="badge bg-danger">Html</span>
+                  <span class="badge bg-success">Git Hub</span>
+                </div>
+                <h5 class="card-title mb-0">Freddy Vega</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="assets/speakers/cvander.jpeg" alt="Foto de Sacha">
+              <div class="card-body">
+                <div class="badges ">     <!-- badges -->
+                  <span class="badge bg-warning text-dark">JavaScript </span>
+                  <span class="badge bg-info text-dark">React</span>
+                </div>
+                <h5 class="card-title mb-0">Christian Van Der H.</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- Speakers --> 
+    
+    <!-- Lugar y fecha de nuestro evento-->
+     <section id="place-time">
+       <div class="container-fluid">
+         <div class="row">
+           <div class="col-12 col-lg-6 px-0 "><!-- px-0 quitarle el padding a la columna en su derecha e izquierda -->
+            <img class="img-honolulu" src="assets/images/honolulu.jpg" alt="Honolulu">
+           </div>
+           <div class="col-12 col-lg-6 pt-2 pb-2 align-self-center"> <!-- pt-2 padding top 2  col-12 ocupe todo el ancho en mobile con col-lg 6 en grande  align-self-center centrar el contenido de forma vertical-->
+            <h2>Honolulu - Octubre 2025</h2>
+            <p>
+              Honolulu o Honolulú es la capital y localidad más grande del
+              estado de Hawái, en los Estados Unidos. 
+              Honolulu es la más sureña de entre las principales ciudades estadounidenses. 
+              Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu,
+              la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).
+            </p>
+            <a href="https://es.wikipedia.org/wiki/Honolulu"class="btn btn-outline-light" target="_blank">Conoce más</a>
+           </div>
+         </div>
+       </div>
+     </section>
+    <!-- Lugar y fecha de nuestro evento -->
+    <!-- Conviertete en orador --> 
+      <section id="convierte-orador" class="pt-2 pb-2">
+        <div class="container">
+          <div class="row">
+            <div class="col text-uppercase text-center">
+              <small>Conviértete en un</small>
+              <h2>Orador</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              Anótate como orador para dar una charla <abbr data-toggle="tooltip" title="Charlas de 5 minutos">charla ignite</abbr>.     <!-- data-toggle="tooltip" se activa con el index.js y su codigo --> 
+              Cuéntanos de qué quieres hablar!
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2"> <!-- offset-md-1 una columna en la izquierda y col-md-10 diez en la drecha con los campos -->
+              <form>
+                <div class="row">
+                  <div class="form-label col-12 col-md-6"> <!-- Con mb-3  or form-label lo que viene adentro es un grupo de elementos y agrega cierto espaciado --> 
+                    <input type="text" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="form-label col-12 col-md-6">
+                    <input type="text" class="form-control" placeholder="Apellido">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-label col">
+                    <textarea name="text" class="form-control form-control-lg" placeholder="Sobre que quieres hablar?"></textarea>  <!-- form-control-lg decimos que es un input dentro de nuestro formulario y que quermos q sea de tamaño grande -->
+                    <small class="form-text text-muted"> <!-- text-muted para que aparezca mas gris -->
+                      Recuerda incluir un titulo para tu charla
+                    </small>
+                  </div>
+                </div>
+                <div class="form-row">
+                   <div class="col">
+                      <button type="button" class="btn btn-platzi w-100">Enviar</button>
+                   </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Conviertete en orador --> 
+    <!-- Footer -->
+     <footer id= "footer" class="pb-4 pt-4"> <!--/* un pading  en footer pb=pading boton pt=pading top*/-->
+       <div class="container">  <!-- class container para limitar el ancho d enuestra grilla -->
+         <div class="row text-center"> <!-- text center texto centrado -->
+           <div class="col-12 col-lg"> <!-- empezamos con first mobile con col-12 -->
+             <a href="#">Preguntas frecuentes</a>
+            </div>
+           <div class="col-12 col-lg"><!-- para dispositivos grandes con col-lg -->
+             <a href="#">Contáctanos</a>
+           </div>
+           <div class="col-12 col-lg">
+            <a href="#">Prensa</a>
+           </div>
+           <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+           </div>
+           <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+           </div>
+           <div class="col-12 col-lg">
+            <a href="#">Estudiantes</a>
+           </div>
+         </div>
+       </div>
+     </footer>
+     <!-- Footer -->
+     <!-- Modal se recomienda poner los modals a la altura del body -->
+      <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Comprar Tickets</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-label col">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>     
+                  </div>
+                </div>
+              </form>
+              <!-- mostrar un mensaje de alerta para decirle al usuario que va recibir un emeail cuando complete el frmulario -->
+              <div class="alert alert-warning" role="alert">
+                Recibiras un correo de confirmación si sales sorteado 
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-platzi">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Modal -->
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="index.js"></script> 
+  </body>
+</html>
